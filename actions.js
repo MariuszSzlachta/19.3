@@ -6,14 +6,14 @@ const DELETE_COMMENT = 'DELETE_COMMENT';
 const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
 const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 
-// ADD
-{
-  type: ADD_COMMENT,
-  id: uuid.v4(),
-  text: text,
-  thumbs_up: 0,
-  thumbs_down: 0
-}
+// // ADD
+// {
+//   type: ADD_COMMENT,
+//   id: uuid.v4(),
+//   text: text,
+//   thumbs_up: 0,
+//   thumbs_down: 0
+// }
 
 function addComment(text) {
   return {
@@ -26,13 +26,13 @@ function addComment(text) {
 }
 const boundAddComment = text => dispatch(addComment(text));
 
-// EDIT
-{
-  type: EDIT_COMMENT,
-  id,
-  text: 'newText'
+// // EDIT
+// {
+//   type: EDIT_COMMENT,
+//   id,
+//   text: 'newText'
 
-}
+// }
 
 function editComment(id, newText) {
   return {
@@ -45,11 +45,11 @@ function editComment(id, newText) {
 const boundEditComment = (id, newText) => dispatch(editComment(id, newText));
 
 
-// DELETE
-{
-  type: DELETE_COMMENT,
-  id
-}
+// // DELETE
+// {
+//   type: DELETE_COMMENT,
+//   id
+// }
 
 function deleteComment(id) {
   return {
@@ -62,11 +62,11 @@ const boundDeleteComment = id => dispatch(deleteComment(id));
 
 
 // THUMB UP
-{
-  type: THUMB_UP_COMMENT,
-  id,
-  thumbs_up: 2,
-}
+// {
+//   type: THUMB_UP_COMMENT,
+//   id,
+//   thumbs_up: 2,
+// }
 
 function thumbUpComment(id) {
   return {
@@ -81,11 +81,11 @@ const boundThumbUpComment = id => dispatch(thumbUpComment(id));
 
 // THUMB DOWN
 
-{
-  type: THUMB_DOWN_COMMENT,
-  id,
-  thumbs_down: thumbs_down + 1
-}
+// {
+//   type: THUMB_DOWN_COMMENT,
+//   id,
+//   thumbs_down: thumbs_down + 1
+// }
 
 function thumbDownComment(id) {
   return {

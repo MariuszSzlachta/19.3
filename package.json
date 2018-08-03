@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel test.js --watch --out-file test_compiled.js"
+    "start": "babel TEST2.js --watch --out-file reducer_compiled.js"
   },
   "author": "",
   "license": "ISC",

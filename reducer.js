@@ -5,7 +5,7 @@ const initialState = {
   users: []
 }
 
-function reducer(state = initialState, action) {
+const stan = function reducer(state = initialState, action) {
   switch (action.type) {
 
     case ADD_COMMENT:
@@ -38,4 +38,3 @@ function reducer(state = initialState, action) {
       return state;
   }
 }
-export default reducer;
