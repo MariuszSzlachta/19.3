@@ -44,7 +44,12 @@ function editComment(id, newText) {
 
 // stan początkowy
 var initialState = {
-  comments: [],
+  comments: [{
+    id: 'a23s',
+    text: 'babababa',
+    thumbs_up: 1,
+    thumbs_down: 3
+  }],
   users: []
 };
 var store = {
