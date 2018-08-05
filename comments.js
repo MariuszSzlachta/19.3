@@ -14,8 +14,7 @@ function comments(state = initialState, action) {
           {
             id: action.id,
             text: action.text,
-            thumbs_up: 0,
-            thumbs_down: 0
+            votes: 0
           }, ...state.comments]
       })
 
@@ -38,7 +37,7 @@ function comments(state = initialState, action) {
       return Object.assign({}, state, {
         comments: state.comments.map(comment => {
           if (comment.id === action.id){
-            return {...comment, thumbs_up: comment.thumbs_up + 1}
+            return {...comment, votes: comment.votes + 1}
           }
           return comment
         })
@@ -48,7 +47,7 @@ function comments(state = initialState, action) {
       return Object.assign({}, state, {
         comments: state.comments.map(comment => {
           if (comment.id === action.id){
-            return {...comment, thumbs_down: comment.thumbs_down + 1}
+            return {...comment, votes: comment.votes - 1}
           }
           return comment
         })

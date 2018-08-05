@@ -11,8 +11,7 @@ function addComment(text) {
     type: ADD_COMMENT,
     id: uuid.v4(),
     text: text,
-    thumbs_up: 0,
-    thumbs_down: 0
+    votes: 0
   }
 }
 const boundAddComment = text => dispatch(addComment(text));
@@ -40,7 +39,7 @@ function thumbUpComment(id) {
   return {
     type: THUMB_UP_COMMENT,
     id,
-    thumbs_up: thumbs_up + 1
+    votes: votes + 1
   }
 }
 
@@ -50,7 +49,7 @@ function thumbDownComment(id) {
   return {
     type: THUMB_DOWN_COMMENT,
     id,
-    thumbs_down: thumbs_down + 1
+    votes: votes - 1
   }
 }
 
