@@ -104,3 +104,33 @@ var store = {
       return state;
   }
 }
+
+// // OD MICHAŁĄ
+// case ADD_COMMENT:
+//   return [{
+//     id: action.id,
+//     text: action.text,
+//     ...
+//   }
+//   , ...state.comments];
+
+
+// case THUMB_UP_COMMENT: 
+// return state.comments.map(comment => {
+//     if (comment.id === action.id){
+//       return {...comment, thumbs_up: comment.thumbs_up + 1}
+//     }
+//     return comment
+//   })
+// })
+// // ssssssssssssssssssssssssssssssssss
+
+
+// case THUMB_UP_COMMENT: 
+//       return [...state, state.comments.map(comment => {
+//           if (comment.id === action.id){
+//             return {...comment, thumbs_up: comment.thumbs_up + 1}
+//           }
+//           return comment
+//         })]
+//       })
