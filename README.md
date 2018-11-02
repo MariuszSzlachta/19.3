@@ -1,7 +1,7 @@
 # Redux exercise
 
 ## What's this?
-This is exercise done while learning Redux during Kodilla's bootcamp. This exercise is a simple blog.
+This is exercise done while learning Redux during Kodilla's bootcamp. This exercise is a part of blog app.
 
 ## Technologies
 
