@@ -1,18 +1,17 @@
 import uuid from uuid;
 
-const ADD_COMMENT = 'ADD_COMMENT'
-const EDIT_COMMENT = 'EDIT_COMMENT';
-const DELETE_COMMENT = 'DELETE_COMMENT';
-const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
-const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
+export const ADD_COMMENT = 'ADD_COMMENT'
+export const EDIT_COMMENT = 'EDIT_COMMENT';
+export const DELETE_COMMENT = 'DELETE_COMMENT';
+export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
+export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 
 function addComment(text) {
   return {
     type: ADD_COMMENT,
     id: uuid.v4(),
     text: text,
-    thumbs_up: 0,
-    thumbs_down: 0
+    votes: 0
   }
 }
 const boundAddComment = text => dispatch(addComment(text));
@@ -40,7 +39,7 @@ function thumbUpComment(id) {
   return {
     type: THUMB_UP_COMMENT,
     id,
-    thumbs_up: thumbs_up + 1
+    votes: votes + 1
   }
 }
 
@@ -50,7 +49,7 @@ function thumbDownComment(id) {
   return {
     type: THUMB_DOWN_COMMENT,
     id,
-    thumbs_down: thumbs_down + 1
+    votes: votes - 1
   }
 }
 
